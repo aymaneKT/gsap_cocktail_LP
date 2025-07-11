@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap");
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Modern Negra";
+  src: url("./fonts/Modern\ Negra\ Demo.ttf") format("truetype");
+}
+@theme {
+  --color-yellow: #e7d393;
+  --color-white-100: #efefef;
+  --font-sans: "Mona Sans", sans-serif;
+  --font-modern-negra: "Modern Negra", sans-serif;
+  --font-serif: "DM Serif Text", serif;
+}
+
+body,
+html {
+  scroll-behavior: smooth;
+  background: black;
+  color: white;
+  width: 100%;
+}
+
+@utility flex-center {
+  @apply flex justify-center items-center;
+}
+@utility col-column {
+  @apply flex flex-col justify-center items-center;
+}
+@utility abs-center {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+}
+@utility text-gradient {
+  background: linear-gradient(to bottom, #ffffff, #898989);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
