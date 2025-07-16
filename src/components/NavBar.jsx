@@ -1,43 +1,46 @@
-import { useGSAP } from "@gsap/react";
-import { navLinks } from "../../constants";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
-export default function NavBar() {
+import { navLinks } from "../../constants/index.jsx";
+
+const Navbar = () => {
   useGSAP(() => {
-    const tl = gsap.timeline({
+    const navTween = gsap.timeline({
       scrollTrigger: {
         trigger: "nav",
         start: "bottom top",
       },
     });
-    tl.fromTo(
+
+    navTween.fromTo(
       "nav",
-      { background: "transparent" },
+      { backgroundColor: "transparent" },
       {
-        background: "#00000050",
-        backgroundfilter: "blur(10px)",
+        backgroundColor: "#00000050",
+        backgroundFilter: "blur(10px)",
         duration: 1,
         ease: "power1.inOut",
       }
     );
   });
+
   return (
-    <>
-      <nav className="flex  justify-between items-center just fixed  w-full  z-50 py-5 px-[5rem] flex-wrap max-[622px]:justify-center ">
-        <a href="#home" className="flex items-center gap-5">
-          <img src="/Images/logo.png" />
-          <p className="font-modern-negra text-3xl">Velvet Pour</p>
+    <nav>
+      <div>
+        <a href="#home" className="flex items-center gap-2">
+          <img src="/images/logo.png" alt="logo" />
+          <p>Velvet Pour</p>
         </a>
-        <ul className="flex gap-6 ">
+
+        <ul>
           {navLinks.map((link) => (
             <li key={link.id}>
-              <a href={`#${link.id}`} className="flex items-center text-sm">
-                {link.title}
-              </a>
+              <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
         </ul>
-      </nav>
-    </>
+      </div>
+    </nav>
   );
-}
+};
+export default Navbar;

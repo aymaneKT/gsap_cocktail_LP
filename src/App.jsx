@@ -3,13 +3,20 @@ import { ScrollTrigger, SplitText } from "gsap/all";
 import "./App.css";
 import NavBar from "./components/navbar";
 import Hero from "./components/Hero";
+import Cocktails from "./components/Cocktails";
+import About from "./components/About";
+import Art from "./components/Art";
 gsap.registerPlugin(ScrollTrigger, SplitText);
 function App() {
   return (
     <>
-      <NavBar />
-      <Hero />
-      <div className="h-dvh"></div>
+      <main>
+        <NavBar />
+        <Hero />
+        <Cocktails />
+        <About />
+        <Art />
+      </main>
     </>
   );
 }
