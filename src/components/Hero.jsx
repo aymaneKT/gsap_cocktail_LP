@@ -59,6 +59,7 @@ export default function Hero() {
         start: startValue,
         end: endValue,
         scrub: 1,
+        // pin: true,
       },
     });
     videoRef.current.onloadedmetadata = () => {

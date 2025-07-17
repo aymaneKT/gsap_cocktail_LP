@@ -3,7 +3,6 @@ import { openingHours, socials } from "../../constants";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
 
-
 export default function Contact() {
   useGSAP(() => {
     const titleSplit = SplitText.create("#contact h2", { type: "words" });
@@ -61,13 +60,13 @@ export default function Contact() {
 
         <div>
           <h3>Visit Our Bar</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, eum.</p>
+          <p>456, Raq Blvd. #404, Los Angeles, CA 90210</p>
         </div>
 
         <div>
           <h3>Contact Us</h3>
-          <p>55555555555</p>
-          <p>aymanekabtitech@.com</p>
+          <p>(555) 987-6543</p>
+          <p>hello@jsmcocktail.com</p>
         </div>
 
         <div>
